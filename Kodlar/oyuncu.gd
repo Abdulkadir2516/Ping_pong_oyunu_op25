@@ -1,0 +1,14 @@
+extends CharacterBody2D
+
+@export var karakterHiz = 5
+
+#Sahne veya oyun devam ettiği sürece tekrarla
+func _physics_process(delta: float) -> void:
+	velocity = Vector2.ZERO
+	if Input.is_action_pressed("yukarı"):
+		#print("Yukarı Gitti")
+		velocity.y = velocity.y - 1
+	if Input.is_action_pressed("aşağı"):
+		#print("Aşağı Gitti")
+		velocity.y = velocity.y + 1
+	move_and_collide(velocity * karakterHiz)
