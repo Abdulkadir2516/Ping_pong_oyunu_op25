@@ -2,14 +2,19 @@ extends CharacterBody2D
 
 @export var hiz = 10
 
+var sure = 0
 func _ready():
-	velocity.x = [-1,1][randi() % 2] # topun başlangıcta rastgele sağa veya sol yöne gitmesini sağlar
+
+	velocity.x = -1 # [-1,1][randi() % 2] # topun başlangıcta rastgele sağa veya sol yöne gitmesini sağlar
 	velocity.y = [-1,1][randi() % 2] # topun başlangıcta rastgele yukarı veya aşağı yöne gitmesini sağlar
 
 func _physics_process(delta):
-	var carpısannesne = move_and_collide(velocity*hiz)
-	if carpısannesne:
-		velocity = velocity.bounce(carpısannesne.get_normal())
+	sure = int(get_parent().get_node("Zamanlayici").time_left)
+	
+	if sure == 0:
+		var carpısannesne = move_and_collide(velocity*hiz)
+		if carpısannesne:
+			velocity = velocity.bounce(carpısannesne.get_normal())
 
 #topu durdurabilmemizi sağlayacak olan fonksiyon
 func topudurdur():
