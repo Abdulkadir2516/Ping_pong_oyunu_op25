@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var karakterHiz = 20
+var karakterHiz = 10
 
 var top
 

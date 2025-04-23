@@ -16,4 +16,11 @@ func _physics_process(delta: float) -> void:
 		$sure.visible = false
 		$Zamanlayici.stop()
 
-	
+
+
+func _on_sol_duvar_body_entered(body: Node2D) -> void:
+	_baslangic()
+
+
+func _on_sağ_duvar_body_entered(body: Node2D) -> void:
+	_baslangic()

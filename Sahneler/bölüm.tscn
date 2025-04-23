@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dkykkxce6dam4" path="res://Sahneler/top.tscn" id="2_c6rms"]
 [ext_resource type="Script" uid="uid://bj87lklg37x3o" path="res://Kodlar/oyuncu2.gd" id="3_cbnne"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8on6x"]
-size = Vector2(30, 648)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq2bo"]
 size = Vector2(1152, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8on6x"]
+size = Vector2(30, 648)
 
 [node name="Bölüm" type="Node2D"]
 script = ExtResource("1_1pssv")
@@ -60,20 +60,6 @@ script = ExtResource("3_cbnne")
 [node name="Top" parent="." instance=ExtResource("2_c6rms")]
 position = Vector2(569, 326)
 
-[node name="Sol Duvar" type="StaticBody2D" parent="."]
-metadata/_edit_group_ = true
-
-[node name="Hitbox" type="CollisionShape2D" parent="Sol Duvar"]
-position = Vector2(-15, 324)
-shape = SubResource("RectangleShape2D_8on6x")
-
-[node name="Sağ Duvar" type="StaticBody2D" parent="."]
-position = Vector2(1183, 0)
-
-[node name="Hitbox" type="CollisionShape2D" parent="Sağ Duvar"]
-position = Vector2(-15, 324)
-shape = SubResource("RectangleShape2D_8on6x")
-
 [node name="Üst Duvar" type="StaticBody2D" parent="."]
 
 [node name="Hitbox" type="CollisionShape2D" parent="Üst Duvar"]
@@ -89,3 +75,18 @@ shape = SubResource("RectangleShape2D_sq2bo")
 
 [node name="Zamanlayici" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="Sol Duvar" type="Area2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Sol Duvar"]
+position = Vector2(-15, 324)
+shape = SubResource("RectangleShape2D_8on6x")
+
+[node name="Sağ Duvar" type="Area2D" parent="."]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Sağ Duvar"]
+position = Vector2(1168, 324)
+shape = SubResource("RectangleShape2D_8on6x")
+
+[connection signal="body_entered" from="Sol Duvar" to="." method="_on_sol_duvar_body_entered"]
+[connection signal="body_entered" from="Sağ Duvar" to="." method="_on_sağ_duvar_body_entered"]
