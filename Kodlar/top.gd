@@ -14,6 +14,7 @@ func _physics_process(delta):
 	if sure == 0:
 		var carpısannesne = move_and_collide(velocity*hiz)
 		if carpısannesne:
+			$carpma_sesi.play()
 			velocity = velocity.bounce(carpısannesne.get_normal())
 
 #topu durdurabilmemizi sağlayacak olan fonksiyon

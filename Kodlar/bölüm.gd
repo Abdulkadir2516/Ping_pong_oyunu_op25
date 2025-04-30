@@ -4,11 +4,12 @@ var skor1 = 0
 var skor2 = -2
 
 func _baslangic():
-	$Oyuncu.position = Vector2(0,28)
-	$Oyuncu2.position = Vector2(1006,3)
+	$Oyuncu.position = Vector2(50,265)
+	$Oyuncu2.position = Vector2(1060,260)
 	$Top.position = Vector2(1152/2, 647/2)
 	$Zamanlayici.start(3)
 	$sure.visible = true
+	
 	
 func _ready() -> void:
 	$skor_1.text = str(skor1)

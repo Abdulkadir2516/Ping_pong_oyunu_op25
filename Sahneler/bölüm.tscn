@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx3kac1ayc0ka"]
+[gd_scene load_steps=9 format=3 uid="uid://dx3kac1ayc0ka"]
 
 [ext_resource type="PackedScene" uid="uid://bpmdqyh8707vk" path="res://Sahneler/oyuncu.tscn" id="1_0evbi"]
 [ext_resource type="Script" uid="uid://liogkrqtlte3" path="res://Kodlar/bölüm.gd" id="1_1pssv"]
 [ext_resource type="PackedScene" uid="uid://dkykkxce6dam4" path="res://Sahneler/top.tscn" id="2_c6rms"]
 [ext_resource type="Script" uid="uid://bj87lklg37x3o" path="res://Kodlar/oyuncu2.gd" id="3_cbnne"]
 [ext_resource type="Script" uid="uid://7g3ppnmrbrna" path="res://Kodlar/oyuncu.gd" id="3_ne3hm"]
+[ext_resource type="AudioStream" uid="uid://dxc1taoqkw3eq" path="res://Assetler/ses1.ogg" id="6_0r36s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq2bo"]
 size = Vector2(1152, 21)
@@ -52,15 +53,21 @@ text = "Süre"
 uppercase = true
 
 [node name="Oyuncu" parent="." instance=ExtResource("1_0evbi")]
-position = Vector2(44.2655, 321.15)
+position = Vector2(49, 262)
+scale = Vector2(1.05528, 1.14784)
+slide_on_ceiling = false
 script = ExtResource("3_ne3hm")
 
 [node name="Oyuncu2" parent="." instance=ExtResource("1_0evbi")]
-position = Vector2(994.6, 303.847)
+position = Vector2(1060, 259)
+scale = Vector2(0.971848, 1.26525)
 script = ExtResource("3_cbnne")
 
 [node name="Top" parent="." instance=ExtResource("2_c6rms")]
 position = Vector2(569, 326)
+
+[node name="carpma_sesi" type="AudioStreamPlayer" parent="Top"]
+stream = ExtResource("6_0r36s")
 
 [node name="Üst Duvar" type="StaticBody2D" parent="."]
 
