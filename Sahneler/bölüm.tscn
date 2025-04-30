@@ -54,7 +54,6 @@ uppercase = true
 position = Vector2(5, 14)
 
 [node name="Oyuncu2" parent="." instance=ExtResource("1_0evbi")]
-position = Vector2(984, 7)
 script = ExtResource("3_cbnne")
 karakterHiz = 5
 

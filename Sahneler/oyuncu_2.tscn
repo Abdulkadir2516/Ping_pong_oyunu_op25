@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://txujx4ii5m4"]
+
+[ext_resource type="Texture2D" uid="uid://bki0goenrf8lm" path="res://Assetler/Raket.png" id="1_s4qu7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qjx7"]
+size = Vector2(30, 120)
+
+[node name="Oyuncu2" type="CharacterBody2D"]
+
+[node name="Raket" type="Sprite2D" parent="."]
+position = Vector2(12, 66)
+texture = ExtResource("1_s4qu7")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(12, 66)
+shape = SubResource("RectangleShape2D_1qjx7")
