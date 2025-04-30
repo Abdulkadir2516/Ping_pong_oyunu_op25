@@ -1,21 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpmdqyh8707vk"]
+[gd_scene load_steps=3 format=3 uid="uid://bpmdqyh8707vk"]
 
-[ext_resource type="Script" uid="uid://7g3ppnmrbrna" path="res://Kodlar/oyuncu.gd" id="1_7ka28"]
 [ext_resource type="Texture2D" uid="uid://bki0goenrf8lm" path="res://Assetler/Raket.png" id="1_s1anc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrtqd"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijc8v"]
 size = Vector2(31, 122)
 
 [node name="Oyuncu" type="CharacterBody2D"]
-position = Vector2(-3, -47)
-script = ExtResource("1_7ka28")
-karakterHiz = 10
-metadata/_edit_group_ = true
 
 [node name="Raket" type="Sprite2D" parent="."]
-position = Vector2(74, 291)
+position = Vector2(18, 60)
 texture = ExtResource("1_s1anc")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(73.5, 291)
-shape = SubResource("RectangleShape2D_mrtqd")
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(17.5, 58)
+shape = SubResource("RectangleShape2D_ijc8v")

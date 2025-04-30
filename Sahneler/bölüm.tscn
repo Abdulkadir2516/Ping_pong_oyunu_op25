@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx3kac1ayc0ka"]
+[gd_scene load_steps=8 format=3 uid="uid://dx3kac1ayc0ka"]
 
 [ext_resource type="PackedScene" uid="uid://bpmdqyh8707vk" path="res://Sahneler/oyuncu.tscn" id="1_0evbi"]
 [ext_resource type="Script" uid="uid://liogkrqtlte3" path="res://Kodlar/bölüm.gd" id="1_1pssv"]
 [ext_resource type="PackedScene" uid="uid://dkykkxce6dam4" path="res://Sahneler/top.tscn" id="2_c6rms"]
 [ext_resource type="Script" uid="uid://bj87lklg37x3o" path="res://Kodlar/oyuncu2.gd" id="3_cbnne"]
+[ext_resource type="Script" uid="uid://7g3ppnmrbrna" path="res://Kodlar/oyuncu.gd" id="3_ne3hm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq2bo"]
 size = Vector2(1152, 21)
@@ -51,11 +52,12 @@ text = "Süre"
 uppercase = true
 
 [node name="Oyuncu" parent="." instance=ExtResource("1_0evbi")]
-position = Vector2(5, 14)
+position = Vector2(44.2655, 321.15)
+script = ExtResource("3_ne3hm")
 
 [node name="Oyuncu2" parent="." instance=ExtResource("1_0evbi")]
+position = Vector2(994.6, 303.847)
 script = ExtResource("3_cbnne")
-karakterHiz = 5
 
 [node name="Top" parent="." instance=ExtResource("2_c6rms")]
 position = Vector2(569, 326)
