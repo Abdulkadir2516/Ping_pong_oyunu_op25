@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://caygbh8nan0sk"
+path="res://.godot/imported/rock-smash-6304 (mp3cut.net).mp3-adad044a59f1a04288f7332672f9ce2d.mp3str"
+
+[deps]
+
+source_file="res://Assetler/rock-smash-6304 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/rock-smash-6304 (mp3cut.net).mp3-adad044a59f1a04288f7332672f9ce2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

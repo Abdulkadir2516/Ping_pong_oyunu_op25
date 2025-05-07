@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var karakterHiz = 5
+@export var karakterHiz = 7
 
 #Sahne veya oyun devam ettiği sürece tekrarla
 func _physics_process(delta: float) -> void:

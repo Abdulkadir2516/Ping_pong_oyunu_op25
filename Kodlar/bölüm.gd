@@ -14,7 +14,8 @@ func _baslangic():
 func _ready() -> void:
 	$skor_1.text = str(skor1)
 	$skor_2.text = str(skor2)
-
+	$"Arka plan sesi".play()
+	
 	_baslangic()
  	
 func _physics_process(delta: float) -> void:

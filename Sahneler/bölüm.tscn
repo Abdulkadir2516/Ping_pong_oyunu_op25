@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dx3kac1ayc0ka"]
+[gd_scene load_steps=10 format=3 uid="uid://dx3kac1ayc0ka"]
 
 [ext_resource type="PackedScene" uid="uid://bpmdqyh8707vk" path="res://Sahneler/oyuncu.tscn" id="1_0evbi"]
 [ext_resource type="Script" uid="uid://liogkrqtlte3" path="res://Kodlar/bölüm.gd" id="1_1pssv"]
 [ext_resource type="PackedScene" uid="uid://dkykkxce6dam4" path="res://Sahneler/top.tscn" id="2_c6rms"]
 [ext_resource type="Script" uid="uid://bj87lklg37x3o" path="res://Kodlar/oyuncu2.gd" id="3_cbnne"]
 [ext_resource type="Script" uid="uid://7g3ppnmrbrna" path="res://Kodlar/oyuncu.gd" id="3_ne3hm"]
-[ext_resource type="AudioStream" uid="uid://dxc1taoqkw3eq" path="res://Assetler/ses1.ogg" id="6_0r36s"]
+[ext_resource type="AudioStream" uid="uid://caygbh8nan0sk" path="res://Assetler/rock-smash-6304 (mp3cut.net).mp3" id="6_wv3ne"]
+[ext_resource type="AudioStream" uid="uid://dgd7vrhxeoqjx" path="res://Assetler/suspence-background-25609.mp3" id="7_wv3ne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq2bo"]
 size = Vector2(1152, 21)
@@ -67,7 +68,7 @@ script = ExtResource("3_cbnne")
 position = Vector2(569, 326)
 
 [node name="carpma_sesi" type="AudioStreamPlayer" parent="Top"]
-stream = ExtResource("6_0r36s")
+stream = ExtResource("6_wv3ne")
 
 [node name="Üst Duvar" type="StaticBody2D" parent="."]
 
@@ -96,6 +97,10 @@ shape = SubResource("RectangleShape2D_8on6x")
 [node name="Hitbox" type="CollisionShape2D" parent="Sağ Duvar"]
 position = Vector2(1168, 324)
 shape = SubResource("RectangleShape2D_8on6x")
+
+[node name="Arka plan sesi" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_wv3ne")
+parameters/looping = true
 
 [connection signal="body_entered" from="Sol Duvar" to="." method="_on_sol_duvar_body_entered"]
 [connection signal="body_entered" from="Sağ Duvar" to="." method="_on_sağ_duvar_body_entered"]

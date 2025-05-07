@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var hiz = 10
+@export var hiz = 5
 
 var sure = 0
 func _ready():
@@ -24,3 +24,6 @@ func topudurdur():
 #topu tekrardan başlatabilmemizi sağlayacak olan fonksiyon
 func toputekrarbaslat():
 	hiz = 10
+
+func pozisyon():
+	return position.y
