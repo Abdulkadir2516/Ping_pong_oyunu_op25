@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 var sure = 0
 func _ready():
-
+	$Topblue.visible = false
 	velocity.x = -1 # [-1,1][randi() % 2] # topun başlangıcta rastgele sağa veya sol yöne gitmesini sağlar
 	velocity.y = [-1,1][randi() % 2] # topun başlangıcta rastgele yukarı veya aşağı yöne gitmesini sağlar
 
@@ -16,6 +16,12 @@ func _physics_process(delta):
 		if carpısannesne:
 			$carpma_sesi.play()
 			velocity = velocity.bounce(carpısannesne.get_normal())
+	
+	if position.x > 576:
+		$Topblue.visible = true
+	else:
+		$Topblue.visible = false
+
 
 #topu durdurabilmemizi sağlayacak olan fonksiyon
 func topudurdur():
