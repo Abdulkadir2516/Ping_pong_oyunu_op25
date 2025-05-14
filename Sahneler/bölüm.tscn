@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx3kac1ayc0ka"]
+[gd_scene load_steps=12 format=3 uid="uid://dx3kac1ayc0ka"]
 
 [ext_resource type="PackedScene" uid="uid://bpmdqyh8707vk" path="res://Sahneler/oyuncu.tscn" id="1_0evbi"]
 [ext_resource type="Script" uid="uid://liogkrqtlte3" path="res://Kodlar/bölüm.gd" id="1_1pssv"]
 [ext_resource type="PackedScene" uid="uid://dkykkxce6dam4" path="res://Sahneler/top.tscn" id="2_c6rms"]
+[ext_resource type="Texture2D" uid="uid://d0p6krojygupa" path="res://Assetler/gw6863klsi451.webp" id="2_xkdqe"]
 [ext_resource type="Script" uid="uid://bj87lklg37x3o" path="res://Kodlar/oyuncu2.gd" id="3_cbnne"]
 [ext_resource type="Script" uid="uid://7g3ppnmrbrna" path="res://Kodlar/oyuncu.gd" id="3_ne3hm"]
+[ext_resource type="PackedScene" uid="uid://txujx4ii5m4" path="res://Sahneler/oyuncu_2.tscn" id="5_al626"]
 [ext_resource type="AudioStream" uid="uid://caygbh8nan0sk" path="res://Assetler/rock-smash-6304 (mp3cut.net).mp3" id="6_wv3ne"]
 [ext_resource type="AudioStream" uid="uid://dgd7vrhxeoqjx" path="res://Assetler/suspence-background-25609.mp3" id="7_wv3ne"]
 
@@ -23,7 +25,13 @@ offset_right = 1153.0
 offset_bottom = 647.0
 color = Color(0, 0.258824, 1, 1)
 
+[node name="Gw6863Klsi451" type="Sprite2D" parent="."]
+position = Vector2(574.5, 322.75)
+scale = Vector2(1.06389, 1.14425)
+texture = ExtResource("2_xkdqe")
+
 [node name="Saha Çizgisi" type="ColorRect" parent="."]
+visible = false
 offset_left = 552.0
 offset_top = -1.0
 offset_right = 592.0
@@ -59,7 +67,7 @@ scale = Vector2(1.05528, 1.14784)
 slide_on_ceiling = false
 script = ExtResource("3_ne3hm")
 
-[node name="Oyuncu2" parent="." instance=ExtResource("1_0evbi")]
+[node name="Oyuncu2" parent="." instance=ExtResource("5_al626")]
 position = Vector2(1060, 259)
 scale = Vector2(0.971848, 1.26525)
 script = ExtResource("3_cbnne")

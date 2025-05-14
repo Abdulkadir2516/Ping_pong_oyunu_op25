@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var hiz = 5
+@export var hiz = 10
 
 var sure = 0
 func _ready():

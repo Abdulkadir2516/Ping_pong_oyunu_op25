@@ -8,7 +8,7 @@ func _ready() -> void:
 	
 #Sahne veya oyun devam ettiği sürece tekrarla
 
-@export var karakterHiz = 10
+@export var karakterHiz = 7
 
 #Sahne veya oyun devam ettiği süwdswdssrece tekrarla
 func _physics_process(delta: float) -> void:
@@ -24,10 +24,10 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(Vector2(0,yon_belirle()) * karakterHiz)
 
 func yon_belirle():	
-	#if abs(top.position.y - position.y) > 5:
-	if top.pozisyon() > position.y:
-		return 2
+	if abs(top.position.y - position.y) > 35:
+		if top.pozisyon() > position.y:
+			return 2
+		else:
+			return -2
 	else:
-		return -2
-	#else:
-		#return 0
+		return 0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpmdqyh8707vk"]
+[gd_scene load_steps=4 format=3 uid="uid://bpmdqyh8707vk"]
 
 [ext_resource type="Texture2D" uid="uid://bki0goenrf8lm" path="res://Assetler/Raket.png" id="1_s1anc"]
+[ext_resource type="Texture2D" uid="uid://vlolsqvo67io" path="res://Assetler/Obi-Wan-PNG-Picture.png" id="2_6r4g7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ijc8v"]
 size = Vector2(31, 122)
@@ -14,3 +15,8 @@ texture = ExtResource("1_s1anc")
 [node name="hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(18, 61)
 shape = SubResource("RectangleShape2D_ijc8v")
+
+[node name="Obi-wan-png-picture" type="Sprite2D" parent="."]
+position = Vector2(18, 60)
+scale = Vector2(0.272152, 0.271097)
+texture = ExtResource("2_6r4g7")
