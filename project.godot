@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="OP25 Ping Pong"
-run/main_scene="res://Sahneler/bölüm.tscn"
+run/main_scene="uid://bc1v25072edgl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://Kodlar/globals.gd"
 
 [display]
 

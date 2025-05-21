@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyyn8xhudhihu"]
+
+[ext_resource type="Script" uid="uid://bl3m5g3utrg5o" path="res://Kodlar/nasıl_oynanır.gd" id="1_21762"]
+
+[node name="nasıl_oynanır" type="Node2D"]
+script = ExtResource("1_21762")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 648.0
+color = Color(0.517647, 0.152941, 0.854902, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 176.0
+offset_top = 149.0
+offset_right = 418.0
+offset_bottom = 204.0
+text = "1. Oyuncu Kontrolleri"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = -163.0
+offset_top = 97.0
+offset_right = 104.0
+offset_bottom = 147.0
+text = "Yukarı Yön Kontrolü:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -163.0
+offset_top = 170.0
+offset_right = 104.0
+offset_bottom = 216.0
+text = "Aşağı Yön Kontrolü:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Label"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 97.0
+offset_right = 304.0
+offset_bottom = 147.0
+placeholder_text = "W"
+
+[node name="TextEdit2" type="TextEdit" parent="Label"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 170.0
+offset_right = 304.0
+offset_bottom = 220.0
+placeholder_text = "S"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 719.0
+offset_top = 149.0
+offset_right = 961.0
+offset_bottom = 204.0
+text = "2. Oyuncu Kontrolleri"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label2"]
+offset_left = -163.0
+offset_top = 97.0
+offset_right = 104.0
+offset_bottom = 147.0
+text = "Yukarı Yön Kontrolü:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -163.0
+offset_top = 170.0
+offset_right = 104.0
+offset_bottom = 216.0
+text = "Aşağı Yön Kontrolü:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Label2"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 97.0
+offset_right = 304.0
+offset_bottom = 147.0
+placeholder_text = "Up"
+
+[node name="TextEdit2" type="TextEdit" parent="Label2"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 170.0
+offset_right = 304.0
+offset_bottom = 220.0
+placeholder_text = "Down"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 24.0
+offset_right = 280.0
+offset_bottom = 90.0
+text = "Geri Dön"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,8 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc1v25072edgl"]
+[gd_scene load_steps=3 format=3 uid="uid://bc1v25072edgl"]
 
 [ext_resource type="Texture2D" uid="uid://co2hf62immij6" path="res://Assetler/928451.jpg" id="1_6kmy5"]
+[ext_resource type="Script" uid="uid://b530o1jacm3yj" path="res://Kodlar/giris.gd" id="2_maufc"]
 
 [node name="giris" type="Sprite2D"]
 position = Vector2(576.5, 323.5)
 scale = Vector2(0.598437, 0.599074)
 texture = ExtResource("1_6kmy5")
+script = ExtResource("2_maufc")
+
+[node name="tek_kisilik" type="Button" parent="."]
+offset_left = -791.228
+offset_top = -361.391
+offset_right = -422.228
+offset_bottom = -268.391
+theme_override_font_sizes/font_size = 30
+text = "Tek Kişilik"
+
+[node name="cift_kisilik" type="Button" parent="."]
+offset_left = -791.228
+offset_top = -214.498
+offset_right = -422.228
+offset_bottom = -121.498
+theme_override_font_sizes/font_size = 30
+text = "Çift Kişilik"
+
+[node name="nasil_oynanir" type="Button" parent="."]
+offset_left = -791.228
+offset_top = -67.6043
+offset_right = -422.228
+offset_bottom = 25.3957
+theme_override_font_sizes/font_size = 30
+text = "Nasıl Oynanır"
+
+[connection signal="pressed" from="tek_kisilik" to="." method="_on_tek_kisilik_pressed"]
+[connection signal="pressed" from="cift_kisilik" to="." method="_on_cift_kisilik_pressed"]
+[connection signal="pressed" from="nasil_oynanir" to="." method="_on_nasil_oynanir_pressed"]
