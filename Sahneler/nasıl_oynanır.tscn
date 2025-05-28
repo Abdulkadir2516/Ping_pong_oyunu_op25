@@ -20,6 +20,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Label"]
+layout_mode = 0
 offset_left = -163.0
 offset_top = 97.0
 offset_right = 104.0
@@ -64,6 +65,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
 offset_left = -163.0
 offset_top = 97.0
 offset_right = 104.0
@@ -82,7 +84,7 @@ text = "Aşağı Yön Kontrolü:"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="TextEdit" type="TextEdit" parent="Label2"]
+[node name="TextEdit3" type="TextEdit" parent="Label2"]
 layout_mode = 0
 offset_left = 123.0
 offset_top = 97.0
@@ -90,7 +92,7 @@ offset_right = 304.0
 offset_bottom = 147.0
 placeholder_text = "Up"
 
-[node name="TextEdit2" type="TextEdit" parent="Label2"]
+[node name="TextEdit4" type="TextEdit" parent="Label2"]
 layout_mode = 0
 offset_left = 123.0
 offset_top = 170.0
@@ -105,4 +107,8 @@ offset_right = 280.0
 offset_bottom = 90.0
 text = "Geri Dön"
 
+[connection signal="gui_input" from="Label/TextEdit" to="." method="_on_text_edit_gui_input"]
+[connection signal="gui_input" from="Label/TextEdit2" to="." method="_on_text_edit_2_gui_input"]
+[connection signal="gui_input" from="Label2/TextEdit3" to="." method="_on_text_edit_3_gui_input"]
+[connection signal="gui_input" from="Label2/TextEdit4" to="." method="_on_text_edit_4_gui_input"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
