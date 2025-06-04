@@ -33,6 +33,15 @@ offset_bottom = 25.3957
 theme_override_font_sizes/font_size = 30
 text = "Nasıl Oynanır"
 
+[node name="cikis" type="Button" parent="."]
+offset_left = -791.228
+offset_top = 80.9583
+offset_right = -422.228
+offset_bottom = 173.958
+theme_override_font_sizes/font_size = 30
+text = "Çıkış"
+
 [connection signal="pressed" from="tek_kisilik" to="." method="_on_tek_kisilik_pressed"]
 [connection signal="pressed" from="cift_kisilik" to="." method="_on_cift_kisilik_pressed"]
 [connection signal="pressed" from="nasil_oynanir" to="." method="_on_nasil_oynanir_pressed"]
+[connection signal="pressed" from="cikis" to="." method="_on_cikis_pressed"]

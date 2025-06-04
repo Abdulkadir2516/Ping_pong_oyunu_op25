@@ -23,6 +23,9 @@ func _physics_process(delta: float) -> void:
 	if $sure.text == "0":
 		$sure.visible = false
 		$Zamanlayici.stop()
+	
+	if Input.is_action_pressed("cikis"):
+		get_tree().change_scene_to_file("res://Sahneler/giris.tscn")
 
 
 

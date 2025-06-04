@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkykkxce6dam4"]
+[gd_scene load_steps=10 format=3 uid="uid://dkykkxce6dam4"]
 
 [ext_resource type="Texture2D" uid="uid://coivey8v8fgf3" path="res://Assetler/Top.png" id="1_5wgek"]
 [ext_resource type="Script" uid="uid://b865ym1jpymvd" path="res://Kodlar/top.gd" id="1_134io"]
@@ -6,6 +6,27 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jy5dr"]
 radius = 17.0294
+
+[sub_resource type="Gradient" id="Gradient_ustri"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_doo4q"]
+gradient = SubResource("Gradient_ustri")
+
+[sub_resource type="Curve" id="Curve_ustri"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.503856, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_doo4q"]
+curve = SubResource("Curve_ustri")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xtlu3"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 20.0
+scale_max = 20.0
+scale_curve = SubResource("CurveTexture_doo4q")
+color = Color(1, 0, 0, 1)
+color_ramp = SubResource("GradientTexture1D_doo4q")
 
 [node name="Top" type="CharacterBody2D"]
 script = ExtResource("1_134io")
@@ -19,3 +40,8 @@ texture = ExtResource("1_5wgek")
 [node name="Topblue" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_ustri")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+speed_scale = 5.0
+process_material = SubResource("ParticleProcessMaterial_xtlu3")
